@@ -10,8 +10,12 @@ export default class ChromeBoisDomain extends Component {
      * function that has been provided and is already imported
      * (`drawChromeBoiAtCoords` expects two arguments, an x and a y coordinate)
      */
+    drawChromeBoiAtCoords(event.pageX, event.pageY)
   }
   
+  handleClick = (event) => {
+    console.log('test')
+  }
   /* TODO: Create an event handler which, when fired, invokes the provided
    * `toggleCycling` function with no arguments. Don't forget the click event
    * listener that should fire it!
@@ -28,6 +32,7 @@ export default class ChromeBoisDomain extends Component {
     return (
       <canvas 
         onMouseMove={this.handleMouseMove}
+        onClick={this.handleClick}
         width='900'
         height='600'
         tabIndex="0">
